@@ -1,28 +1,31 @@
-﻿//Input
+//Input
 double budget = double.Parse(Console.ReadLine());
-double videocardsCount = double.Parse(Console.ReadLine());
-double processorsCount = double.Parse(Console.ReadLine());
-double ramsCount = double.Parse(Console.ReadLine());
+int videocardsCount = int.Parse(Console.ReadLine());
+int processorsCount = int.Parse(Console.ReadLine());
+int ramsCount = int.Parse(Console.ReadLine());
 
+//Prices Calculation
+double videocardsBill = videocardsCount * 250;
+double processorsBill = processorsCount * (videocardsBill * 0.35);
+double ramsBill = ramsCount * (videocardsBill * 0.1);
 
-//Prices Calculations
-double videocardsSum = 250 * videocardsCount;
-double processorsSum = processorsCount * (videocardsSum * 0.35);
-double ramsSum = ramsCount * (videocardsSum * 0.1);
+double bill = videocardsBill + processorsBill + ramsBill;
 
-double sum = videocardsSum + processorsSum + ramsSum;
-
+//Discount
 if (videocardsCount > processorsCount)
 {
-    sum -= sum * 0.15;
+    //bill -= (bill * 0.15);
+    bill = bill - (bill * 0.15);
 }
 
 //Output
-if (sum <= budget)
+if (bill <= budget)
 {
-    Console.WriteLine($"You have {budget - sum:f2} leva left!");
+    double moneyLeft = budget - bill;
+    Console.WriteLine($"You have {moneyLeft:f2} leva left!");
 }
 else
 {
-    Console.WriteLine($"Not enough money! You need {sum - budget:f2} leva more!");
+    double neededMoney = bill - budget;
+    Console.WriteLine($"Not enough money! You need {neededMoney:f2} leva more!");
 }
