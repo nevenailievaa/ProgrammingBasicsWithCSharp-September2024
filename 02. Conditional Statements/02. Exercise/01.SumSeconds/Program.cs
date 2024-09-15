@@ -1,19 +1,19 @@
-﻿//Input
+//Input
 int firstPlayerTime = int.Parse(Console.ReadLine());
 int secondPlayerTime = int.Parse(Console.ReadLine());
 int thirdPlayerTime = int.Parse(Console.ReadLine());
 
-//Time Calculation
+//Time Cslculation
 int timeInSeconds = firstPlayerTime + secondPlayerTime + thirdPlayerTime;
-int hours = timeInSeconds / 60;  //124 minutes / 60 = 2 hours
-int minutes = timeInSeconds % 60; //124 minutes % 60 = 4 minutes
+int minutes = timeInSeconds / 60; //124 / 60 = 2 minutes
+int seconds = timeInSeconds % 60; //124 % 60 = 4 seconds
 
 //Output
-if (minutes < 10)
+if (seconds < 10)
 {
-    Console.WriteLine($"{hours}:0{minutes}");
+    Console.WriteLine($"{minutes}:0{seconds}");
 }
 else
 {
-    Console.WriteLine($"{hours}:{minutes}");
+    Console.WriteLine($"{minutes}:{seconds}");
 }
