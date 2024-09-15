@@ -3,7 +3,6 @@ double recordInSeconds = double.Parse(Console.ReadLine());
 double metersToSwim = double.Parse(Console.ReadLine());
 double secondsForOneMeterSwim = double.Parse(Console.ReadLine());
 
-
 //Calculations
 double swimSecondsWithoutDelay = metersToSwim * secondsForOneMeterSwim;
 int delayTimes = (int)metersToSwim / 15;
