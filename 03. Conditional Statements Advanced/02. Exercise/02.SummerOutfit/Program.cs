@@ -1,6 +1,6 @@
-﻿//Input
+//Input
 int degrees = int.Parse(Console.ReadLine());
-string time = Console.ReadLine();
+string dayTime = Console.ReadLine();
 
 //Calculations
 string outfit = "";
@@ -8,12 +8,12 @@ string shoes = "";
 
 if (10 <= degrees && degrees <= 18)
 {
-	switch (time)
+	switch (dayTime)
 	{
 		case "Morning":
-			outfit = "Sweatshirt";
-			shoes = "Sneakers";
-			break;
+            outfit = "Sweatshirt";
+            shoes = "Sneakers";
+            break;
         case "Afternoon":
         case "Evening":
             outfit = "Shirt";
@@ -23,7 +23,7 @@ if (10 <= degrees && degrees <= 18)
 }
 else if (18 < degrees && degrees <= 24)
 {
-    switch (time)
+    switch (dayTime)
     {
         case "Morning":
         case "Evening":
@@ -38,7 +38,7 @@ else if (18 < degrees && degrees <= 24)
 }
 else if (degrees >= 25)
 {
-    switch (time)
+    switch(dayTime)
     {
         case "Morning":
             outfit = "T-Shirt";
