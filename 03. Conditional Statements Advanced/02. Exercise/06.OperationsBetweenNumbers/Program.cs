@@ -1,18 +1,18 @@
-﻿//Input
+//Input
 int a = int.Parse(Console.ReadLine());
 int b = int.Parse(Console.ReadLine());
-string operation = Console.ReadLine();
+char operation = char.Parse(Console.ReadLine());
 
-//Calculations
+//Calculation
 double result = 0;
 bool isEven = false;
 
-if (operation == "+")
+if (operation == '+')
 {
     result = a + b;
     isEven = result % 2 == 0;
 
-    if (isEven == true)
+    if (isEven)
     {
         Console.WriteLine($"{a} + {b} = {result} - even");
     }
@@ -21,12 +21,12 @@ if (operation == "+")
         Console.WriteLine($"{a} + {b} = {result} - odd");
     }
 }
-else if (operation == "-")
+else if (operation == '-')
 {
     result = a - b;
     isEven = result % 2 == 0;
 
-    if (isEven == true)
+    if (isEven)
     {
         Console.WriteLine($"{a} - {b} = {result} - even");
     }
@@ -35,12 +35,12 @@ else if (operation == "-")
         Console.WriteLine($"{a} - {b} = {result} - odd");
     }
 }
-else if (operation == "*")
+else if (operation == '*')
 {
     result = a * b;
     isEven = result % 2 == 0;
 
-    if (isEven == true)
+    if (isEven)
     {
         Console.WriteLine($"{a} * {b} = {result} - even");
     }
@@ -49,7 +49,7 @@ else if (operation == "*")
         Console.WriteLine($"{a} * {b} = {result} - odd");
     }
 }
-else if (operation == "/")
+else if (operation == '/')
 {
     if (b == 0)
     {
@@ -61,7 +61,7 @@ else if (operation == "/")
         Console.WriteLine($"{a} / {b} = {result:f2}");
     }
 }
-else if (operation == "%")
+else if (operation == '%')
 {
     if (b == 0)
     {
