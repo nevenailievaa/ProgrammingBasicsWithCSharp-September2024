@@ -1,50 +1,57 @@
-﻿//Input
-string flowersType = Console.ReadLine();
+//Input
+string typeFlowers = Console.ReadLine();
 int flowersCount = int.Parse(Console.ReadLine());
 int budget = int.Parse(Console.ReadLine());
+
+//Prices
+double rosePrice = 5;
+double dahliaPrice = 3.80;
+double tulipPrice = 2.80;
+double narcissPrice = 3;
+double gladiolaPrice = 2.50;
 
 //Calculations
 double bill = 0;
 
-if (flowersType == "Roses")
+if (typeFlowers == "Roses")
 {
-    bill = 5 * flowersCount;
+    bill = flowersCount * rosePrice;
 
     if (flowersCount > 80)
     {
         bill = bill * 0.9; //10% discount
     }
 }
-else if (flowersType == "Dahlias")
+else if (typeFlowers == "Dahlias")
 {
-    bill = 3.80 * flowersCount;
+    bill = flowersCount * dahliaPrice;
 
     if (flowersCount > 90)
     {
         bill = bill * 0.85; //15% discount
     }
 }
-else if (flowersType == "Tulips")
+else if (typeFlowers == "Tulips")
 {
-    bill = 2.80 * flowersCount;
+    bill = flowersCount * tulipPrice;
 
     if (flowersCount > 80)
     {
         bill = bill * 0.85; //15% discount
     }
 }
-else if (flowersType == "Narcissus")
+else if (typeFlowers == "Narcissus")
 {
-    bill = 3 * flowersCount;
+    bill = flowersCount * narcissPrice;
 
     if (flowersCount < 120)
     {
         bill = bill * 1.15; //15% price up
     }
 }
-else if (flowersType == "Gladiolus")
+else if (typeFlowers == "Gladiolus")
 {
-    bill = 2.50 * flowersCount;
+    bill = flowersCount * gladiolaPrice;
 
     if (flowersCount < 80)
     {
@@ -56,7 +63,7 @@ else if (flowersType == "Gladiolus")
 if (bill <= budget)
 {
     double remainingMoney = budget - bill;
-    Console.WriteLine($"Hey, you have a great garden with {flowersCount} {flowersType} and {remainingMoney:f2} leva left.");
+    Console.WriteLine($"Hey, you have a great garden with {flowersCount} {typeFlowers} and {remainingMoney:f2} leva left.");
 }
 else
 {
