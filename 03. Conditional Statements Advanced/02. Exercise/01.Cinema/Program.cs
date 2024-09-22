@@ -13,9 +13,9 @@ double income = 0;
 
 switch (projectionType)
 {
-	case "Premiere":
+    case "Premiere":
         income = rowsCount * colsCount * premierePrice;
-		break;
+	break;
     case "Normal":
         income = rowsCount * colsCount * normalPrice;
         break;
