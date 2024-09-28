@@ -1,4 +1,4 @@
-﻿//Input
+//Input
 string actorName = Console.ReadLine();
 double academyPoints = double.Parse(Console.ReadLine());
 int juryCount = int.Parse(Console.ReadLine());
@@ -17,10 +17,14 @@ for (int i = 1; i <= juryCount; i++)
     if (points > 1250.5)
     {
         Console.WriteLine($"Congratulations, {actorName} got a nominee for leading role with {points:f1}!");
-        return; //Ending the whole program
+        break; //Exiting the loop
     }
 }
 
 //Failure
-double neededPoints = 1250.5 - points;
-Console.WriteLine($"Sorry, {actorName} you need {neededPoints:f1} more!");
+if (points <= 1250.5)
+{
+
+    double neededPoints = 1250.5 - points;
+    Console.WriteLine($"Sorry, {actorName} you need {neededPoints:f1} more!");
+}
