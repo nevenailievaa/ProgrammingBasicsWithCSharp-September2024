@@ -1,4 +1,4 @@
-﻿//Input
+//Input
 int tabsCount = int.Parse(Console.ReadLine());
 int salary = int.Parse(Console.ReadLine());
 
@@ -24,9 +24,12 @@ for (int i = 1; i <= tabsCount; i++)
     if (salary <= 0)
     {
         Console.WriteLine("You have lost your salary.");
-        return;
+        break; //Exiting the loop
     }
 }
 
 //Output
-Console.WriteLine(salary);
+if (salary > 0)
+{
+    Console.WriteLine(salary);
+}
