@@ -1,4 +1,4 @@
-﻿//Input
+//Input
 string input = Console.ReadLine();
 
 //Calculations
@@ -10,14 +10,15 @@ while (input != "NoMoreMoney")
 
     if (payment < 0)
     {
+        Console.WriteLine($"Invalid operation!");
         break;
     }
 
     sum += payment;
-    Console.WriteLine($"Increase: {payment}");
+    Console.WriteLine($"Increase: {payment:f2}");
 
     input = Console.ReadLine();
 }
 
 //Output
-Console.WriteLine($"Total: {sum}");
+Console.WriteLine($"Total: {sum:f2}");
