@@ -1,20 +1,16 @@
-﻿// Input
+//Input
 int n = int.Parse(Console.ReadLine());
 
-// Calculations
-int start = 1111;
-int end = 9999;
-
-for (int i = start; i <= end; i++)
+//Calculations
+for (int currentNum = 1111; currentNum <= 9999; currentNum++)
 {
-    bool isSpecial = true;  // Reset isSpecial for every new number
-    string iAsString = i.ToString();
+    bool isSpecial = true;
+    string currentNumAsString = currentNum.ToString();
 
-    for (int j = 0; j < iAsString.Length; j++)
+    for (int j = 0; j < currentNumAsString.Length; j++)
     {
-        int currentDigit = int.Parse(iAsString[j].ToString());
+        int currentDigit = int.Parse(currentNumAsString[j].ToString());
 
-        // Check if the digit is 0 to avoid division by zero
         if (currentDigit == 0 || n % currentDigit != 0)
         {
             isSpecial = false;
@@ -22,9 +18,9 @@ for (int i = start; i <= end; i++)
         }
     }
 
-    // Output if the number is special
+    //Output
     if (isSpecial)
     {
-        Console.Write(i + " ");
+        Console.Write(currentNum + " ");
     }
 }
